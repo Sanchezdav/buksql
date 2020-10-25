@@ -2,15 +2,13 @@ module Types
   class UserType < Types::BaseObject
     field :id, ID, null: false
     field :email, String, null: false
-    field :encrypted_password, String, null: false
-    field :reset_password_token, String, null: true
-    field :reset_password_sent_at, GraphQL::Types::ISO8601DateTime, null: true
-    field :remember_created_at, GraphQL::Types::ISO8601DateTime, null: true
     field :first_name, String, null: true
     field :last_name, String, null: true
-    field :announcements_last_read_at, GraphQL::Types::ISO8601DateTime, null: true
-    field :admin, Boolean, null: true
-    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
-    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+    field :books, [Types::BookType], null: true
+    field :books_count, Integer, null: true
+
+    def books_count
+      object.books.count
+    end
   end
 end
