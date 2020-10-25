@@ -136,6 +136,10 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphiql-rails (1.7.0)
+      railties
+      sprockets-rails
+    graphql (1.11.5)
     hashie (4.1.0)
     http (4.4.1)
       addressable (~> 2.3)
@@ -358,6 +362,8 @@ DEPENDENCIES
   faker
   font-awesome-sass (~> 5.13)
   friendly_id (~> 5.3)
+  graphiql-rails
+  graphql
   image_processing
   jbuilder (~> 2.7)
   listen (~> 3.2)
